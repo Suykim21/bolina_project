@@ -6,57 +6,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   <title>Bolina</title>
 </head>
 
 <body>
+  <!-- Navigation -->
+  <div class="navigation">
+    <!-- Checkbox -->
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+    <!-- Navigation Bars -->
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <!-- Navigation color-background -->
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">About</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Services</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Projects</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Clients</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Grid starts -->
   <div class="container">
-    <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-      <label for="navi-toggle" class="navigation__button">
-        <!-- &nbsp; non-breakable space -->
-        <span class="navigation__icon">&nbsp;</span>
-      </label>
+    <header class="header">
+      <h1 class="header__logo">Bolina</h1>
 
-      <div class="navigation__background">&nbsp;</div>
-
-      <nav class="navigation__nav">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Home</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">About</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Services</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Projects</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Clients</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <header class="header"></header>
-    <header class="header2">test
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
-      <p>asdfasdfas</p>
+      <div class="header__text-box">
+        <h1 class="heading-primary">multi concept</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur reprehenderit, tempore quo nulla ipsa rerum
+          deserunt esse.</p>
+        <a href="#" class="btn btn--yellow">view projects</a>
+      </div>
     </header>
+
+    <section class="about">
+      <div class="about__intro">
+        <h2 class="heading-secondary">welcome to bolina</h2>
+        <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, dolorum! Tenetur accusamus magnam, incidunt earum
+          id quas.</p>
+      </div>
+
+      <!-- SKILLS SECTION -->
+      <div class="about__grid">
+        <div class="about__skill">
+          <div class="icon-border">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-camera"></use>
+            </svg>
+          </div>
+          <h3 class="heading-fourth">photography</h3>
+          <p class="paragraph">Dolor sit amet consectetur adipisicing elit. Tenetur accusamus magnam, incidunt earum id quas.</p>
+          <button class="btn btn-two">
+            <span class="btn-two__visible">read more</span>
+            <span class="btn-two__invisible">
+              <svg class="icon icon-two">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="about__skill">
+          <div class="icon-border">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-eyedropper"></use>
+            </svg>
+          </div>
+          <h3 class="heading-fourth">retouching</h3>
+          <p class="paragraph">Ipsum dolor, sit amet consectetur adipisicing elit. Mollitia minima sunt dolor.</p>
+          <button class="btn btn-two">
+            <span class="btn-two__visible">read more</span>
+            <span class="btn-two__invisible">
+              <svg class="icon icon-two">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="about__skill">
+          <div class="icon-border">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-brush"></use>
+            </svg>
+          </div>
+          <h3 class="heading-fourth">styling & make up</h3>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facere vel consequatur soluta.</p>
+          <button class="btn btn-two">
+            <span class="btn-two__visible">read more</span>
+            <span class="btn-two__invisible">
+              <svg class="icon icon-two">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services__pic"></div>
+
+      <div class="services__details">
+        <h3 class="heading-third">commercial photography</h3>
+        <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus at ipsa saepe, officia ea.</p>
+        <a href="#" class="btn">show more</a>
+      </div>
+
+      <div class="services__pic"></div>
+
+      <div class="services__details">
+        <h3 class="heading-third">commercial photography</h3>
+        <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus at ipsa saepe, officia ea.</p>
+        <a href="#" class="btn">show more</a>
+      </div>
+
+      <div class="services__pic"></div>
+
+      <div class="services__details">
+        <h3 class="heading-third">commercial photography</h3>
+        <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus at ipsa saepe, officia ea.</p>
+        <a href="#" class="btn">show more</a>
+      </div>
+
+    </section>
   </div>
 </body>
 

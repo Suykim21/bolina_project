@@ -1,0 +1,33 @@
+.about {
+  margin: 5rem;
+  overflow: hidden;
+  
+
+  &__intro {
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    margin-top: 5rem;
+  }
+
+  &__skill {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem;
+    text-align: center;
+
+  }
+
+
+}
+
+
+// GRID LAYOUT
+// .about-one {
+//   grid-column: 2/3;
+// }
