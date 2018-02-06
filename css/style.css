@@ -147,7 +147,7 @@ a {
   .btn-two:hover .btn-two__visible {
     transform: translateY(100%); }
   .btn-two:hover .btn-two__invisible {
-    top: 0; }
+    top: 20%; }
   .btn-two:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -204,6 +204,9 @@ a {
   background-size: cover;
   opacity: .9;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      background-image: url(../img/women2.jpeg); } }
   .header__logo {
     position: absolute;
     top: 3rem;
