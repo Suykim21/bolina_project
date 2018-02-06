@@ -1,40 +1,38 @@
 .navigation {
-  // display: flex;
-
   &__checkbox {
     display: none;
   }
 
-  // Creating circular navbar button
+  // Navigation bars
   &__button {
     background-color: $color-white;
     height: 7rem;
     width: 7rem;
     position: fixed;
-    // moving circle down
     top: 6rem;
-    // moving circle to left
     right: 6rem;
-    // creating round circle
     border-radius: 50%;
-    // being on top of everything vertically
+    // to hide background-color and put bars on top
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-brown-black, .1);
-    text-align: center;
+    // Creating subtle shadow;
+    // offset-x | offset-y | blur-radius | color
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
     cursor: pointer;
+    // Centering nav-bars
+    text-align: center;
 
     @include respond(tab-port) {
-      top: 4rem;
+      top: 5rem;
       right: 4rem;
     }
 
     @include respond(phone) {
-      top: 3rem;
-      right: 3rem;
+        top: 4rem;
+        right: 3rem;
     }
   }
 
-  // Creating Yellow Background for spread animation
+  // Creating circular color-background
   &__background {
     height: 6rem;
     width: 6rem;
@@ -42,123 +40,155 @@
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
-    // putting behind button
-    z-index: 1000;
+    // starts from the middle of the element and spreads
     background-image: radial-gradient($color-yellow-light, $color-yellow-dark);
+    // to ensure navigation is always on top stack
+    z-index: 1000;
+    // animating transform
+    // for reference: http://easings.net/
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
+    // Covering entire 
+    // transform:scale(80);
+
     @include respond(tab-port) {
-      top: 4.5rem;
+      top: 5.5rem;
       right: 4.5rem;
     }
-  
+
     @include respond(phone) {
-      top: 3.5rem;
-      right: 3.5rem;
+        top: 4.5rem;
+        right: 3.5rem;
     }
   }
 
-  // Adjusting Navbar
+  // Positioning Navigation 
   &__nav {
-    // Fully being visible 100% on screen
     height: 100vh;
-    // background-color: $color-brown-black;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1500;
 
-    // opacity: 0;
+    // make navigation invisible
+    opacity: 0;
+    // collapse to make links unclickable
     width: 0;
+    // animating opacity
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
+  // Positioning list in the center of the page
   &__list {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    width: 100%;
   }
 
+  // Spreading out links
   &__item {
-    margin: 1rem;
+    margin: .5rem;
   }
 
+  // Styling links
   &__link {
     &:link,
     &:visited {
+      // To apply paddings
       display: inline-block;
       font-size: 3rem;
-      font-weight: 400;
-      padding: 1rem 2rem;
-      color: $color-brown-black;
-      text-decoration: none;
+      font-weight: lighter;
+      padding: .5rem 1.5rem;
+      color: $color-white;
       text-transform: uppercase;
+      // Creating background-color for links
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-      background-size: 220%;
+      // background-size adjusts background-color movement if % increased
+      // shifting white background to right size - starting point
+      background-size: 230%;
       transition: all .4s;
-
-      span {
-        margin-right: 1.5rem;
-        display: inline-block;
-      }
     }
 
     &:hover,
     &:active {
       background-position: 100%;
-      color: $color-brown-black;
+      color: $color-yellow-dark;
+      // Moving links slightly to right size
       transform: translateX(1rem);
     }
   }
 
-  //ICON
+  // FUNCTIONALITY
+  // Checkbox hack
+  //  ~ sibling 
+  // Show background-color when checked
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  // Show links when checked
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  // ICON
+  // Creating nav-bars
   &__icon {
     position: relative;
+    // moving nav-bars down to the middle
     margin-top: 3.5rem;
 
     &,
     &::before,
     &::after {
-        width: 3rem;
-        height: 2px;
-        background-color: $color-brown-black;
-        display: inline-block;
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-1;
+      display: inline-block;
     }
 
+    // creating content and positioning bars
     &::before,
     &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        transition: all .2s;
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
     }
 
-    &::before { top: -.8rem; }
-    &::after { top: .8rem; }
-}
+    &::before { top: -.8rem;}
+    &::after { top: .8rem;}
+  }
 
-&__button:hover &__icon::before {
+  // Moving top and bottom bars when hoverd on button element
+  &__button:hover &__icon::before {
     top: -1rem;
-}
+  }
 
-&__button:hover &__icon::after {
+  &__button:hover &__icon::after {
     top: 1rem;
-}
+  }
 
-&__checkbox:checked + &__button &__icon {
+  // X ANIMATION
+  // + adjacent sibling
+  &__checkbox:checked + &__button &__icon {
+    // make middle bar - or span element transparent;
     background-color: transparent;
-}
+  }
 
-&__checkbox:checked + &__button &__icon::before {
+  &__checkbox:checked + &__button &__icon::before {
+    // Putting top bar into middle
     top: 0;
+    // Rotation animation 180-45 = 135
     transform: rotate(135deg);
-}
+  } 
 
-&__checkbox:checked + &__button &__icon::after {
+  &__checkbox:checked + &__button &__icon::after {
     top: 0;
     transform: rotate(-135deg);
-}
+  } 
+
 }
