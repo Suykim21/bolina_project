@@ -31,5 +31,11 @@
   &__item {
     margin: 2rem;
     fill: $color-white;
+
+    @include respond(phone) {
+      &--two {
+        margin: 0;
+      }
+    }
   }
 }

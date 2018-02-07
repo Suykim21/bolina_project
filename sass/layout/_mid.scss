@@ -34,6 +34,11 @@
     // padding: 5rem;
     margin-top: 7rem;
 
+    &--two {
+      padding: 10rem 5rem;
+      margin: 0;
+    }
+
     @include respond(tab-port) {
       padding: 2rem;
     }

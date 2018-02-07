@@ -10,7 +10,7 @@
   }
 
   @include respond(phone) {
-    font-size: 3.3rem;
+    font-size: 4rem;
   }
 }
 
@@ -22,6 +22,14 @@
   font-size: 4rem;
   text-transform: uppercase;
   margin: 2rem;
+
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+
+  &--white {
+    color: $color-white;
+  }
 
   &::after {
     content: "";
@@ -41,6 +49,19 @@
   font-size: 3rem;
   text-transform: uppercase;
   margin: 3rem 2rem;
+
+  &--two {
+    margin: 0;
+
+    &::after {
+      background-color: $color-grey-dark-1 !important;
+    }
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+    margin: 2rem;
+  }
 
   &::after {
     content: "";
@@ -66,5 +87,29 @@
 
   &--two {
     margin: 0;
+    font-size: 1.5rem;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
   }
+
+  &--three {
+    margin: 0;
+    font-size: 4rem;
+    color: $color-black;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &--lightgrey {
+    color: $color-grey-light;
+  }
+}
+
+.copyright-text {
+  margin: 0;
+  font-size: .8rem;
 }

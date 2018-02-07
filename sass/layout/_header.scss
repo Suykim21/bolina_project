@@ -16,7 +16,7 @@
   position: relative;
 
   @include respond(phone) {
-    background-image: url(../img/women2.jpeg);
+    background-image: url(../img/nine.jpeg);
   }
 
 
@@ -26,10 +26,20 @@
     left: 4rem;
 
     font-size: 3rem;
+
+    @include respond(phone) {
+      left: 3rem;
+      padding: .5rem 1.2rem;
+      background-color: $color-white;
+    }
   }
 
   &__text-box {
     text-align: center;
+
+    @include respond(phone) {
+      margin-top: auto;
+    }
   }
 }
 
