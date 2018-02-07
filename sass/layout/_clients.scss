@@ -1,0 +1,56 @@
+.clients {
+  margin: 0;
+  background-color: $color-grey-light-1;
+
+  &__background {
+    background-image: url(../img/clients.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 5rem;
+  }
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $color-grey-light;
+    filter: brightness(70%);
+    margin: 3rem 0 1rem 0;
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 3rem;
+      align-items: start;
+    }
+    
+    &--two {
+      text-align: center;
+    }
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+  }
+
+  &__counter {
+    margin: 5rem;
+  }
+}

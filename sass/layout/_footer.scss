@@ -1,0 +1,89 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 150px 1fr 60px;
+
+  background-color: $color-grey-light;
+
+  &__intro {
+    // background-color: $color-yellow-dark;
+
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__contact {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-yellow-light, 0.8),
+        rgba($color-yellow-dark, 0.8)),
+    url(../img/women2.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__map {
+    background-color: $color-grey-dark;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5rem;
+    text-align: center;
+    grid-column: 1/-1;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__end {
+    background-color: $color-black;
+    grid-column: 1/-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__enddetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__address {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &__post {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &__gallery {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &__copyright {
+    display: grid;
+    align-items: center;
+
+    background-color: $color-yellow-dark;
+    text-align: center;
+    grid-column: 1/-1;
+  }
+}
