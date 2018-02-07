@@ -4,6 +4,14 @@
 
   color: $color-black;
   text-transform: uppercase;
+
+  @include respond(tab-land) {
+    font-size: 8rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.3rem;
+  }
 }
 
 .heading-secondary {
@@ -11,7 +19,7 @@
   flex-direction: column;
   align-items: center;
 
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   margin: 2rem;
 
@@ -25,6 +33,25 @@
   }
 }
 
+.heading-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 3rem 2rem;
+
+  &::after {
+    content: "";
+    height: .5rem;
+    width: 7rem;
+    margin: 2rem;
+    background-color: $color-yellow-light;
+    display: inline-block;
+  }
+}
+
 .heading-fourth {
   font-size: 2rem;
   text-transform: uppercase;
@@ -32,8 +59,12 @@
 }
 
 .paragraph {
-  margin-bottom: auto;
+  margin: auto 2rem;
 
   font-size: 1.2rem;
   color: $color-black;
+
+  &--two {
+    margin: 0;
+  }
 }

@@ -22,14 +22,14 @@
     text-align: center;
 
     @include respond(tab-port) {
-      top: 5rem;
-      right: 4rem;
+      top: 2rem;
+      right: 3rem;
     }
 
-    @include respond(phone) {
-        top: 4rem;
-        right: 3rem;
-    }
+    // @include respond(phone) {
+    //     top: 1rem;
+    //     right: 2rem;
+    // }
   }
 
   // Creating circular color-background
@@ -52,14 +52,14 @@
     // transform:scale(80);
 
     @include respond(tab-port) {
-      top: 5.5rem;
-      right: 4.5rem;
+      top: 2.5rem;
+      right: 3.5rem;
     }
 
-    @include respond(phone) {
-        top: 4.5rem;
-        right: 3.5rem;
-    }
+    // @include respond(phone) {
+    //     top: 1.5rem;
+    //     right: 2.5rem;
+    // }
   }
 
   // Positioning Navigation 
