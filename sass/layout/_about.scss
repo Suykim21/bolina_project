@@ -1,6 +1,6 @@
-.about {
+.about,
+.projects {
   margin: 5rem;
-  overflow: hidden;
   
 
   &__intro {
@@ -12,6 +12,14 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
     margin-top: 5rem;
+
+    @include respond(tab-port){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
   }
 
   &__skill {
@@ -21,10 +29,14 @@
     padding: 3rem;
     text-align: center;
 
+    @include respond(tab-port) {
+      padding: 0;
+    }
+
   }
-
-
 }
+
+
 
 
 // GRID LAYOUT

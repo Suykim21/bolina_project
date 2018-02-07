@@ -13,6 +13,18 @@
     color: $color-black;
   }
 
+  &--two {
+    border: 3px solid $color-black;
+    margin: 2rem;
+    padding: .5rem;
+    transition: all .4s;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
   &--yellow {
     border: 3px solid $color-yellow-light;
     font-size: 1.5rem;
@@ -61,9 +73,30 @@
   &:hover &__invisible {
     top: 20%;
   }
+}
 
-  &:focus {
-    outline: none;
-    animation: pulsate 1s infinite;
+.btn-three {
+  display: inline-block;
+  position: relative;
+  margin: .4rem;
+  padding: 1rem;
+  z-index: 0;
+
+  // Placing background-color
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $color-yellow-light;
+    // hiding background image
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .3s ease-out;
   }
+
+  &:hover:before {transform: scaleX(1);}
 }
