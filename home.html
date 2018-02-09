@@ -27,22 +27,22 @@
     <nav class="navigation__nav">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Home</a>
+          <a href="#home" class="navigation__link js--scroll-to-home">Home</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">About</a>
+          <a href="#about" class="navigation__link js--scroll-to-about">About</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Services</a>
+          <a href="#services" class="navigation__link js--scroll-to-services">Services</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Projects</a>
+          <a href="#projects" class="navigation__link js--scroll-to-projects">Projects</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Clients</a>
+          <a href="#clients" class="navigation__link js--scroll-to-clients">Clients</a>
         </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">Contact</a>
+        <li class="navigation__item js--scroll-to-contact">
+          <a href="#contact" class="navigation__link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -50,7 +50,7 @@
   <!-- Grid starts -->
   <div class="container">
 
-    <header class="header">
+    <header class="header" id="home">
       <h1 class="header__logo">Bolina</h1>
 
       <div class="header__text-box">
@@ -61,7 +61,7 @@
       </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__intro">
         <h2 class="heading-secondary">welcome to bolina</h2>
         <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, dolorum! Tenetur accusamus magnam, incidunt earum
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Services section -->
-    <section class="services">
+    <section class="services" id="services">
       <div class="services__pic pic-one">
         <div class="features">
           <div class="features__name">Joanne Doe</div>
@@ -251,7 +251,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="projects__intro">
         <h2 class="heading-secondary">projects</h2>
         <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam aliquam maiores dolorum asperiores dicta! Quidem aliquam
@@ -292,7 +292,7 @@
       <a href="#" class="btn btn--yellow">view more</a>
     </section>
 
-    <section class="clients">
+    <section class="clients" id="clients">
       <div class="clients__background">
         <div class="clients__intro">
           <h2 class="heading-secondary heading-secondary--white">clients</h2>
@@ -349,7 +349,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer__intro">
         <div class="footer__contact">
           <div class="mid__details mid__details--two">
@@ -372,17 +372,77 @@
       <div class="footer__end">
         <div class="footer__enddetails">
           <div class="footer__address">
-            <h4>Bolina</h4>
-            asdfasfasdfflk;asjdfasjflk;asjdfk;lajsdf;lkajsdf;klajsdf;lksaj;l
-            <p>asdfasfasdfflk;asjdfasjflk;asjdfk;lajsdf;lkajsdf;klajsdf;lksaj;l</p>
-            pasdfasfasdfflk;asjdfasjflk;asjdfk;lajsdf;lkajsdf;klajsdf;lksaj;l
-            <p>asdfasfasdfflk;asjdfasjflk;asjdfk;lajsdf;lkajsdf;klajsdf;lksaj;l</p>
+            <h4 class="heading-fourth heading-fourth--two">Bolina.</h4>
+            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a.</p>
+
+            <p class="paragraph--two paragraph--two--v3">172 North 14th Street, Office 303</p>
+            <p class="paragraph--two paragraph--two--v3">Los Angeles CA 90028</p>
+            <p class="paragraph--two paragraph--two--v3">Phone: (213)906-2053</p>
+            <p class="paragraph--two paragraph--two--v3">E-mail: bolina@bolinarg.com</p>
+            <ul class="features__list features__list--two">
+              <li class="features__item features__item--three">
+                <a href="#" class="social__link">
+                  <svg class="social social--three">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="features__item features__item--three">
+                <a href="#" class="social__link">
+                  <svg class="social social--three">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="features__item features__item--three">
+                <a href="#" class="social__link">
+                  <svg class="social social--three">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="footer__post">
-            POST
+            <h4 class="heading-5">recent post</h4>
+            <div class="post">
+              <img src="img/secondg.jpeg" alt="post1pic" class="post__pic">
+              <div class="post__text">
+                <p class="paragraph--two--v3--two">Web Design Goes Viral</p>
+                <p class="details--two">February 6, 2018
+                  <span>by Steve</span>
+                </p>
+              </div>
+            </div>
+            <div class="post">
+              <img src="img/stock.jpeg" alt="post1pic" class="post__pic">
+              <div class="post__text">
+                <p class="paragraph--two--v3--two">Sketch Is Hard</p>
+                <p class="details--two">January 18, 2018
+                  <span>by Ronald</span>
+                </p>
+              </div>
+            </div>
+            <div class="post">
+              <img src="img/clients.jpeg" alt="post1pic" class="post__pic">
+              <div class="post__text">
+                <p class="paragraph--two--v3--two">Happy New Year!</p>
+                <p class="details--two">January 1, 2018
+                  <span>by Jane</span>
+                </p>
+              </div>
+            </div>
           </div>
           <div class="footer__gallery">
-            GALLERY
+            <h4 class="heading-5">Gallery</h4>
+            <div class="gallery-grid">
+              <img src="img/five.jpeg" alt="one" class="post__pic--v2">
+              <img src="img/six.jpeg" alt="two" class="post__pic--v2">
+              <img src="img/two.jpeg" alt="three" class="post__pic--v2">
+              <img src="img/work.jpeg" alt="four" class="post__pic--v2">
+              <img src="img/women.jpeg" alt="five" class="post__pic--v2">
+              <img src="img/seven.png" alt="six" class="post__pic--v2">
+            </div>
           </div>
         </div>
       </div>
@@ -393,6 +453,12 @@
       </div>
     </footer>
   </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 
 </html>

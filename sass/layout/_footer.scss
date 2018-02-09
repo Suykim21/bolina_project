@@ -39,10 +39,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 5rem;
     text-align: center;
     grid-column: 1/-1;
+    grid-row: 2/3;
 
     @include respond(phone) {
       flex-direction: column;
@@ -61,21 +60,49 @@
   &__enddetails {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    width: 90vw;
+
+    @include respond(tab-port) {
+      width: 100vw;
+    }
+
+    @include respond(phone) {
+      // text-align: center;
+    }
   }
 
   &__address {
     color: #fff;
-    border: 1px solid #fff;
+
+    @include respond(phone) {
+      grid-row: 1/2;
+      grid-column: 1/4;
+    }
+    
   }
 
   &__post {
+    display: flex;
+    flex-direction: column;
+
     color: #fff;
-    border: 1px solid #fff;
+
+    @include respond(phone) {
+      grid-row: 2/3;
+      grid-column: 1/4;
+    }
+    
   }
 
   &__gallery {
     color: #fff;
-    border: 1px solid #fff;
+
+    @include respond(phone) {
+      grid-row: 3/4;
+      grid-column: 1/4;
+    }
+    
   }
 
   &__copyright {
@@ -86,4 +113,13 @@
     text-align: center;
     grid-column: 1/-1;
   }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  padding: 3rem;
 }

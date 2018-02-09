@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+
+  &__pic {
+    height: 5rem;
+    width: 5rem;
+    margin: 3rem;
+
+    &--v2 {
+      display: block;
+      align-items: unset;
+      height: 0;
+
+      height: 7rem;
+      width: 7rem;
+      margin: 0;
+    }
+  }
+}
