@@ -47,6 +47,7 @@
     // animating transform
     // for reference: http://easings.net/
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    opacity: .7;
 
     // Covering entire 
     // transform:scale(80);
