@@ -11,6 +11,10 @@
     display: grid;
     grid-column: 1/-1;
     grid-template-columns: repeat(2, 1fr);
+
+    // @include respond(phone) {
+    //   grid-auto-rows: 50vmax;
+    // }
   }
 
   &__contact {
@@ -24,11 +28,12 @@
 
     @include respond(phone) {
       grid-column: 1/-1;
+      background-position: left;
     }
   }
 
   &__map {
-    background-color: $color-grey-dark;
+    // background-color: $color-grey-dark;
 
     @include respond(phone) {
       grid-column: 1/-1;

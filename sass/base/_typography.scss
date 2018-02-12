@@ -5,6 +5,10 @@
   color: $color-black;
   text-transform: uppercase;
 
+  & span {
+    color: $color-yellow-dark;
+  }
+
   @include respond(tab-land) {
     font-size: 8rem;
   }

@@ -55,4 +55,214 @@ $(document).ready(function () {
         }
       }
     });
+
+  // Animation on Scroll
+
+  // ABOUT ANIMATIONS
+  $('.js--wp-about1').waypoint(function (direction) {
+    $('.js--wp-about1').addClass('about_animated');
+  }, {
+    offset: '50%'
+  });
+
+  $('.js--wp-about1').waypoint(function (direction) {
+    $('.js--wp-about2').addClass('about_animated about_animated--two');
+  }, {
+    offset: '50%'
+  });
+
+  $('.js--wp-about1').waypoint(function (direction) {
+    $('.js--wp-about3').addClass('about_animated about_animated--three');
+  }, {
+    offset: '50%'
+  });
+
+  // SERVICE ANIMATIONS
+  // SERVICES PICS
+
+  $('.services').waypoint(function (direction) {
+    console.log('im at services');
+    $('.js--wp-services-pic1').addClass('services_animated');
+  }, {
+    offset: '10%'
+  });
+
+  $('.services').waypoint(function (direction) {
+    $('.js--wp-services-pic2').addClass('services_animated');
+  }, {
+    offset: '10%'
+  });
+
+  $('.services').waypoint(function (direction) {
+    $('.js--wp-services-pic3').addClass('services_animated');
+  }, {
+    offset: '10%'
+  });
+
+  // SERVICES DETAILS
+
+  $('.services').waypoint(function (direction) {
+    $('.js--wp-services-details1').addClass('services_animated--details');
+  }, {
+    offset: '10%'
+  });
+
+  $('.services').waypoint(function (direction) {
+    $('.js--wp-services-details2').addClass('services_animated--details');
+  }, {
+    offset: '10%'
+  });
+
+  $('.services').waypoint(function (direction) {
+    $('.js--wp-services-details3').addClass('services_animated--details');
+  }, {
+    offset: '10%'
+  });
+
+  // GALLERY ANIMATIONS
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects1').addClass('gallery_animated');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects2').addClass('gallery_animated gallery_animated--two');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects3').addClass('gallery_animated gallery_animated--three');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects4').addClass('gallery_animated gallery_animated--four');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects5').addClass('gallery_animated gallery_animated--three');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects6').addClass('gallery_animated gallery_animated--four');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects7').addClass('gallery_animated gallery_animated--two');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects8').addClass('gallery_animated gallery_animated--three');
+  }, {
+    offset: '40%'
+  });
+
+  $('.gallery').waypoint(function (direction) {
+    $('.js--wp-projects9').addClass('gallery_animated gallery_animated--five');
+  }, {
+    offset: '40%'
+  });
+
+  // ANIMATED COUNTER
+  $('.clients').waypoint(function (direction) {
+    console.log('Im at counter')
+    $('.counter').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  })
+
+
+  // FOOTER ANIMATIONS
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-post1').addClass('footer_animated');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-post2').addClass('footer_animated footer_animated--two');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-post3').addClass('footer_animated footer_animated--three');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic1').addClass('footer_animated');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic2').addClass('footer_animated gallery_animated--two');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic3').addClass('footer_animated footer_animated--three');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic4').addClass('footer_animated footer_animated--four');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic5').addClass('footer_animated gallery_animated--five');
+  }, {
+    offset: '40%'
+  });
+
+  $('.footer__cta').waypoint(function (direction) {
+    $('.js--wp-footer-pic6').addClass('footer_animated footer_animated--six');
+  }, {
+    offset: '40%'
+  });
+
+
+  // GOOGLE MAP
+
+  var map = new GMaps({
+    div: '.footer__map',
+    lat: 34.1444789,
+    lng: -118.2578922,
+    zoom: 12
+  });
+
+  map.addMarker({
+    lat: 34.1444789,
+    lng: -118.2578922,
+    title: 'Americana Way, Glendale CA',
+    infoWindow: {
+      content: '<p>Bolina HQ</p>'
+    }
+  });
 });
